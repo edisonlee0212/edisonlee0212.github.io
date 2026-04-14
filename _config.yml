@@ -23,11 +23,12 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Bosheng Li"
-  bio              : "PhD graduate and researcher working on computer graphics, procedural modeling, botanical reconstruction, plant geometry, and interactive systems."
+  pronouns         :
+  bio              : "PhD graduate and researcher in computer graphics, procedural modeling, botanical reconstruction, plant geometry, and interactive systems."
   location         :
   employer         :
   uri              : "https://edisonlee0212.github.io"
-  email            : "li2343@purdue.edu"
+  email            : "li2343@purdue.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile

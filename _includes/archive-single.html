@@ -55,14 +55,13 @@
     {% if post.citation %}
       <p>Recommended citation: {{ post.citation }}</p>
     {% endif %}
-
     {% if post.paperurl or post.codeurl or post.projecturl or post.videourl or post.slidesurl %}
-      <p class="archive__item-links">
+      <p>
         {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
-        {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
-        {% if post.projecturl %}<a href="{{ post.projecturl }}">Project</a>{% endif %}
-        {% if post.videourl %}<a href="{{ post.videourl }}">Video</a>{% endif %}
-        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
+        {% if post.codeurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+        {% if post.projecturl %}{% if post.paperurl or post.codeurl %} | {% endif %}<a href="{{ post.projecturl }}">Project</a>{% endif %}
+        {% if post.videourl %}{% if post.paperurl or post.codeurl or post.projecturl %} | {% endif %}<a href="{{ post.videourl }}">Video</a>{% endif %}
+        {% if post.slidesurl %}{% if post.paperurl or post.codeurl or post.projecturl or post.videourl %} | {% endif %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
       </p>
     {% endif %}
 
